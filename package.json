@@ -1,0 +1,11 @@
+{
+  "name": "novapos-sync",
+  "private": true,
+  "description": "NovaPOS invoice app — MongoDB Atlas sync bridge",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.9.0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "583932968743",
+    "project_id": "eppos-41139",
+    "storage_bucket": "eppos-41139.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583932968743:android:c1d60b9ddbafd98643b302",
+        "android_client_info": {
+          "package_name": "com.novapos.novapos_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAqBKIX1F99njCRCbSm_NqLQ2y25zozVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
