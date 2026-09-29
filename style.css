@@ -2334,3 +2334,251 @@ table.p2-tbl {
   background: var(--surface-2);
   border-color: var(--brand);
 }
+
+/* ============ Mobile responsiveness (extended) ============ */
+body {
+  overflow-x: clip;
+}
+
+@media (max-width:768px) {
+
+  /* 16px inputs stop iOS Safari from zooming on focus */
+  .input,
+  select.input,
+  textarea.input {
+    font-size: 1rem;
+  }
+
+  /* topbar / view tighten */
+  .topbar {
+    padding: .75rem .9rem;
+    gap: .6rem;
+  }
+
+  .view {
+    padding: 1rem .85rem 3.5rem;
+  }
+
+  /* toolbars: stack search + filters full width */
+  .toolbar {
+    gap: .55rem;
+  }
+
+  .toolbar .grow,
+  .toolbar>select.input,
+  .toolbar>input.input,
+  .toolbar>.btn {
+    flex: 1 1 100%;
+    width: 100% !important;
+  }
+
+  /* forms: collapse inline-overridden grids (reminders, expenses) */
+  .f-row-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .f-row-3 .btn {
+    width: 100%;
+    height: auto !important;
+  }
+
+  .form-section {
+    padding: 1.1rem;
+  }
+
+  /* hide item column-header labels; mobile item-row reorders anyway */
+  .item-row>small,
+  .item-row>span {
+    display: none
+  }
+
+  /* lists */
+  .li-row {
+    padding: .8rem 1rem;
+    gap: .7rem;
+  }
+
+  .li-main {
+    flex: 1 1 60%;
+  }
+
+  /* dashboard widgets */
+  .stat {
+    padding: .95rem 1rem;
+    gap: .7rem;
+  }
+
+  .stat .ic {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  .stat .ic svg {
+    width: 18px;
+    height: 18px
+  }
+
+  .card-head,
+  .card-pad {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .donut-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .pnl-hero {
+    padding: 1.2rem 1.1rem;
+  }
+
+  /* invoice paper: shrink print-only chrome for phone screens */
+  .p2-sheet {
+    padding: 1.6rem 1.15rem;
+  }
+
+  .p2-title-serif {
+    font-size: 2rem;
+  }
+
+  .p2-info-row,
+  .p2-bottom-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .p2-billed-col,
+  .p2-pay-info,
+  .p2-biz-signature-col {
+    max-width: 100%;
+  }
+
+  .p2-meta-col {
+    text-align: left;
+  }
+
+  .p2-biz-signature-col {
+    text-align: left;
+  }
+
+  .p2-summary-wrap {
+    justify-content: flex-start;
+  }
+
+  .p2-subtotal-block {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .p2-thankyou-script {
+    font-size: 2rem;
+  }
+
+  .p2-tbl th,
+  .p2-tbl td {
+    padding: .6rem .25rem;
+  }
+
+  /* touch scrolling inside table cards */
+  .table-wrap {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* modals + toasts */
+  .modal-card {
+    max-height: 88vh;
+    overflow-y: auto;
+    width: min(480px, 100%);
+  }
+
+  .toasts {
+    bottom: calc(1.1rem + env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width:430px) {
+  .view {
+    padding: .9rem .65rem 3.5rem
+  }
+
+  .grid {
+    gap: .8rem
+  }
+
+  .g-4 {
+    grid-template-columns: 1fr 1fr;
+    gap: .65rem;
+  }
+
+  .stat {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+    padding: .85rem .9rem;
+  }
+
+  .stat b {
+    font-size: 1.05rem;
+  }
+
+  .stat small {
+    font-size: .7rem;
+  }
+
+  .topbar {
+    padding: .65rem .7rem
+  }
+
+  .topbar-title h1 {
+    font-size: 1rem;
+  }
+
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .li-row {
+    padding: .75rem .8rem;
+  }
+
+  .li-ic {
+    width: 36px;
+    height: 36px;
+  }
+
+  .li-amt {
+    font-size: .9rem;
+  }
+
+  .item-row {
+    grid-template-columns: 58px 1fr 82px 34px;
+    gap: .45rem;
+  }
+
+  .btn {
+    padding: .65rem 1rem;
+  }
+
+  .btn-sm {
+    padding: .5rem .85rem;
+  }
+
+  .toasts {
+    left: .8rem;
+    right: .8rem;
+    max-width: none;
+  }
+
+  .page-head h2 {
+    font-size: 1.15rem;
+  }
+
+  .empty {
+    padding: 2.2rem 1rem;
+  }
+}
